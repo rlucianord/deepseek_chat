@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=DeepSeek Wrapper
+Exec=/path/to/deepseek_wrapper.py
+Icon=/path/to/icon.png
+Type=Application
+Categories=Utility;
