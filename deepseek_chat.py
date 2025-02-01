@@ -6,7 +6,7 @@ import json
 
 # DeepSeek API configuration
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"  # Replace with the actual API endpoint
-DEEPSEEK_API_KEY = "your_api_key_here"  # Replace with your actual API key
+DEEPSEEK_API_KEY = "your_api_key_here"   
 
 # Headers for the API request
 HEADERS = {
@@ -41,18 +41,18 @@ class DeepSeekChatApp:
     def __init__(self, root):
         self.root = root
         self.root.title("DeepSeek Chat")
-        self.root.geometry("500x500")
+        self.root.geometry("600x500")
 
         # Chat history display
         self.chat_history = scrolledtext.ScrolledText(root, wrap=tk.WORD, state='disabled')
         self.chat_history.pack(padx=10, pady=10, fill=tk.BOTH, expand=True)
 
         # User input field
-        self.user_input = tk.Entry(root, width=50)
+        self.user_input = tk.Entry(root, width=50,text="Welcome to DeepSeek Chat!\n\n",font=("Arial", 12), bg="#f0f0f0")
         self.user_input.pack(padx=10, pady=10, side=tk.LEFT, fill=tk.X, expand=True)
 
         # Send button
-        self.send_button = tk.Button(root, text="OK", command=self.send_message,bg="blue",fg="white")
+        self.send_button = tk.Button(root, text="Send", command=self.send_message,bg="blue",fg="white",font=("Arial", 12))
         self.send_button.pack(padx=10, pady=10, side=tk.RIGHT)
 
         # Bind Enter key to send message
